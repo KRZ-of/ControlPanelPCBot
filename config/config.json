@@ -1,0 +1,60 @@
+{
+    "telegram": {
+        "token": "YOUR_TG_BOT_TOKEN",
+        "allowed_user_ids": [
+            1234567890
+        ]
+    },
+
+    "bot": {
+        "name": "ControlPanelPCBot"
+    },
+
+    "commands": [
+        {
+            "name": "start",
+            "description": "Главное меню",
+            "action": "menu"
+        },
+        {
+            "name": "volume_up",
+            "description": "Увеличить громкость",
+            "action": "volume_up"
+        },
+        {
+            "name": "volume_down",
+            "description": "Уменьшить громкость",
+            "action": "volume_down"
+        },
+        {
+            "name": "mute",
+            "description": "Выключить/включить звук",
+            "action": "mute"
+        },
+        {
+            "name": "play",
+            "description": "Воспроизведение/пауза",
+            "action": "play_pause"
+        },
+        {
+            "name": "next",
+            "description": "Следующий трек",
+            "action": "next"
+        },
+        {
+            "name": "previous",
+            "description": "Предыдущий трек",
+            "action": "previous"
+        },
+        {
+            "name": "lock",
+            "description": "Заблокировать компьютер",
+            "action": "lock"
+        },
+        {
+            "name": "workspace",
+            "description": "Перейти на рабочий стол",
+            "action": "workspace"
+        }
+    ]
+}
