@@ -1,8 +1,8 @@
 {
     "telegram": {
-        "token": "YOUR_TG_BOT_TOKEN",
+        "token": "8825820387:AAGXAiuPxL-cj2X-PRL4YGsJQj-_TppVyKk",
         "allowed_user_ids": [
-            1234567890
+            1960627492
         ]
     },
 
@@ -17,12 +17,17 @@
             "action": "menu"
         },
         {
-            "name": "volume_up",
+            "name": "exec",
+            "description": "Выполнение команд",
+            "action": "command"
+        },
+        {
+            "name": "volumeU",
             "description": "Увеличить громкость",
             "action": "volume_up"
         },
         {
-            "name": "volume_down",
+            "name": "volumeD",
             "description": "Уменьшить громкость",
             "action": "volume_down"
         },

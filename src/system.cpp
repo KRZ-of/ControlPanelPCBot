@@ -13,6 +13,10 @@ bool execute(const std::string& command) {
     return result == 0;
 }
 
+bool command(const std::string& command) {
+    return execute(command);
+}
+
 bool volumeUp(int count) {
     if (count < 1 || count > 100) {
         return false;

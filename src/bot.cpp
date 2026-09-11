@@ -36,6 +36,7 @@ void sendMessage(
 
     args.chatId = chatId;
     args.text = text;
+    args.parseMode = "HTML";
 
     bot.getApi().sendMessage(args);
 }
@@ -43,7 +44,7 @@ void sendMessage(
 std::string buildMenu(const json& commands) {
     std::stringstream result;
 
-    result << "🖥 <b>PC Control</b>\n\n";
+    result << "🖥<b>PC Control</b>\n\n";
 
     for (const auto& command : commands) {
         const std::string name =
@@ -60,7 +61,7 @@ std::string buildMenu(const json& commands) {
             continue;
         }
 
-        result << "/" << name
+        result << "<code>/" << name << "</code>"
                << " — "
                << description
                << "\n";

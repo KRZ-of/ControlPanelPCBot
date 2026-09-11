@@ -6,8 +6,10 @@ namespace System {
 
     bool execute(const std::string& command);
 
-    bool volumeUp();
-    bool volumeDown();
+    bool command(const std::string& command);
+
+    bool volumeUp(int count);
+    bool volumeDown(int count);
     bool mute();
 
     bool playPause();

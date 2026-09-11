@@ -7,16 +7,35 @@ bool CommandHandler::execute(
     const std::string& action,
     const std::string& argument
 ) {
+    if (action == "command") {
+        try {
+            const std::string& command = argument;
+            return System::command(command);
+        } catch (...) {
+            return false;
+        }
+    }
+
     if (action == "menu") {
         return true;
     }
 
     if (action == "volume_up") {
-        return System::volumeUp();
+        try {
+            const int number = std::stoi(argument);
+            return System::volumeUp(number);
+        } catch (...) {
+            return false;
+        }
     }
 
     if (action == "volume_down") {
-        return System::volumeDown();
+        try {
+            const int number = std::stoi(argument);
+            return System::volumeDown(number);
+        } catch (...) {
+            return false;
+        }
     }
 
     if (action == "mute") {
